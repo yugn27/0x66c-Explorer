@@ -76,7 +76,9 @@ $.getJSON('https://api.coingecko.com/api/v3/simple/price?ids=binancecoin,bitcoin
 	function startWeb3()
 	{
 		if (typeof web3 !== 'undefined') {
-			isMetaMask = web3.currentProvider.isMetaMask;
+			//isMetaMask = web3.currentProvider.isMetaMask;
+			web3 = require('web3');
+			web3 = new web3(new Web3.providers.HttpProvider('https://bsc-dataseed.binance.org/'));
 		}
 		if(!isMetaMask){
 			web3 = require('web3');
@@ -84,8 +86,10 @@ $.getJSON('https://api.coingecko.com/api/v3/simple/price?ids=binancecoin,bitcoin
 		}
 		else
 		{
-			web3.currentProvider.enable();
-			$("#buybutton").show();
+			//web3.currentProvider.enable();
+			//$("#buybutton").show();
+			web3 = require('web3');
+			web3 = new web3(new Web3.providers.HttpProvider('https://bsc-dataseed.binance.org/'));
       //window.location.replace("https://0x167.github.io/ui/?ref=0x6b4663a3966d08af961c64486010febbb1358925");
 		}
 		tokenContract = web3.eth.contract(abi).at(contractAddr);
