@@ -1,5 +1,5 @@
 # 0x66c-Explorer
-0x167 Explorer allows you to explore any addresses current balance in BNB, dividends, referral dividends, token balance, combined dividends, the current value of tokens and referral link.
+0x66c Explorer allows you to explore any addresses current balance in BNB, dividends, referral dividends, token balance, combined dividends, the current value of tokens and referral link.
 https://yugn27.github.io/0x66c-explorer/
 
 
